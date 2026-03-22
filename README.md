@@ -24,7 +24,7 @@ Follow these steps to run the project locally:
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Sreelatha-Vallabhaneni/Portfolio-V2.git
 
 # 2. Navigate into the project folder
 cd <your-project-folder>
