@@ -10,6 +10,8 @@ import { Footer } from '@/components/Footer';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { FloatingElements } from '@/components/FloatingElements';
 import { AnimatedCursor } from '@/components/AnimatedCursor';
+import { CertificationsSection } from '@/components/CertificationsSection';
+import { EducationSection } from '@/components/EducationSection';
 
 const Index = () => {
   return (
@@ -22,9 +24,11 @@ const Index = () => {
         <HeroSection />
         <ProjectsSection />
         <SkillsSection />
-        <CurrentlyLearning />
-        <AboutSection />
+        {/* <CurrentlyLearning />
+        <AboutSection /> */}
         <ExperienceSection />
+        <EducationSection />
+        <CertificationsSection />
         <ContactSection />
       </main>
       <Footer />

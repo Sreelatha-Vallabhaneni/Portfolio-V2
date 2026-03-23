@@ -116,7 +116,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-muted-foreground mb-8 border border-green-500/30"
+            className="inline-flex items-center gap-2 px-4 py-2 mt-10 rounded-full glass-card text-sm font-medium text-muted-foreground mb-8 border border-green-500/30"
           >
             <motion.span 
               className="w-2 h-2 rounded-full bg-green-400"
@@ -160,7 +160,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Code2 className="w-5 h-5" />
-              Frontend Developer
+              <p>Web Developer  |  Frontend Developer</p>
             </motion.span>
           </motion.div>
 
@@ -224,9 +224,9 @@ export const HeroSection = () => {
             className="flex flex-wrap justify-center gap-8 mt-16"
           >
             {[
-              { value: '5+', label: 'Years Experience' },
-              { value: '20+', label: 'Projects Delivered' },
-              { value: '10+', label: 'Happy Clients' },
+              { value: '3+', label: 'Years Experience as developer' },
+              { value: '5+', label: 'Years Experience in IT' },
+              // { value: '10+', label: 'Happy Clients' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -252,7 +252,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 mt-20"
         >
           <motion.a
             href="#projects"

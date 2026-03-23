@@ -21,10 +21,10 @@ export const ContactSection = () => {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-400' },
-    { name: 'GitHub', icon: Github, href: '#', color: 'hover:text-gray-300' },
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-sky-400' },
-    { name: 'Email', icon: Mail, href: 'mailto:hello@sreelatha.dev', color: 'hover:text-primary' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/sreelatha-vallabhaneni-37a406b9/', color: 'hover:text-blue-400' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/Sreelatha-Vallabhaneni', color: 'hover:text-gray-300' },
+    // { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-sky-400' },
+    { name: 'Email', icon: Mail, href: 'mailto:sreelatha.vallabhaneni@gmail.com', color: 'hover:text-primary' },
   ];
 
   return (
@@ -143,7 +143,7 @@ export const ContactSection = () => {
                   <div>
                     <div className="text-xs text-muted-foreground">Email</div>
                     <a href="mailto:hello@sreelatha.dev" className="text-foreground hover:text-primary transition-colors">
-                      hello@sreelatha.dev
+                      sreelatha.vallabhaneni@gmail.com
                     </a>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Location</div>
-                    <span className="text-foreground">United States (Remote Available)</span>
+                    <span className="text-foreground">Copenhagen, Denmark</span>
                   </div>
                 </div>
               </div>
@@ -167,6 +167,8 @@ export const ContactSection = () => {
                   <motion.a
                     key={social.name}
                     href={social.href}
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className={`p-3 rounded-xl glass-card text-muted-foreground ${social.color} transition-all`}
                     whileHover={{ scale: 1.1, y: -4 }}
                     whileTap={{ scale: 0.95 }}

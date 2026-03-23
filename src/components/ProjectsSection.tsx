@@ -1,49 +1,87 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight, Building2 } from 'lucide-react';
 import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'Aisel',
-    subtitle: 'Health-tech AI Platform',
+    title: 'Olelynggard',
+    subtitle: 'e-commerce Platform',
     description:
-      'An intelligent healthcare platform leveraging AI to provide personalized health insights, symptom analysis, and medication recommendations for users worldwide.',
-    image: '/placeholder.svg',
-    techStack: ['React', 'TypeScript', 'TailwindCSS', 'Python', 'FastAPI', 'OpenAI'],
-    role: 'Lead Frontend Developer',
-    highlights: ['Built responsive UI components', 'Integrated AI chat interface', 'Improved performance by 40%'],
-    liveUrl: '#',
-    githubUrl: '#',
+      'Developed an e-commerce application for a Danish luxury jewellery brand focused on heritage, craftsmanship, and elegance.',
+    // image: '/placeholder.svg',
+    techStack: ['Next.js', 'React', 'Redux', 'Tailwind CSS', 'Javascript', 'Typescript', 'Graphql', 'Craft CMS', 'Framer motion',
+      'Splide JS', 'MySQL', 'Docker', 'Vercel', 'NodeJS', 'Centra'],
+    role: 'Frontend Developer',
+    highlights: ['Led front-end architecture and development of a scalable e-commerce platform', 
+      'Built reusable components and dynamic CMS modules to support content flexibility',
+      'Integrated REST APIs and GraphQL for seamless data flow',
+      'Drove code quality through refactoring, testing, and peer reviews',
+      'Collaborated cross-functionally and with stakeholders to deliver high-impact features'],
+    liveUrl: 'https://www.olelynggaard.com/da-dk',
+    companyName: 'Strømworks',
+    //githubUrl: '#',
     gradient: 'from-blue-500 via-cyan-500 to-teal-500',
     accentColor: 'text-cyan-400',
   },
   {
-    title: 'Sufu',
-    subtitle: 'Carbon Emissions SaaS',
+    title: 'ShopEase',
+    subtitle: 'e-commerce Platform',
     description:
-      'Enterprise sustainability platform helping organizations track, analyze, and reduce their carbon footprint through data-driven insights and actionable recommendations.',
+      'ShopEase is a modern, scalable e-commerce web application built using a cutting-edge frontend stack. It demonstrates best practices in UI development, state management, API handling, and performance optimization.',
     image: '/placeholder.svg',
-    techStack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'D3.js'],
-    role: 'Senior Frontend Engineer',
-    highlights: ['Developed interactive dashboards', 'Built real-time data visualization', 'Led UI/UX redesign'],
-    liveUrl: '#',
-    githubUrl: '#',
+    techStack: ['React', 'Vite', 'TypeScript', 'React Query (TanStack)', 'React Hook Form', 'Zod', 'React Router', 'TailwindCSS', 'shadcn/ui', 'Radix UI', 'Lucide Icons'],
+    role: 'Web Developer',
+    highlights: ['Built fully responsive and UI components', 'Optimized for mobile, tablet, and desktop', 'Reusable components with Smooth transitions', 'Scalable and maintainable Code'],
+    liveUrl: 'https://shopease-dk.netlify.app/',
+    githubUrl: 'https://github.com/Sreelatha-Vallabhaneni/ShopEase',
+    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+    accentColor: 'text-cyan-400',
+  },
+  {
+    title: 'Seasony',
+    subtitle: 'SaaS Platform',
+    description:
+      'Smart agricultural monitoring system for vertical farms, providing real-time crop analytics, environmental control, and yield optimization through IoT sensors.',
+    image: '/placeholder.svg',
+    techStack: ['React', 'Javascript', 'Storybook', 'MySQL', 'ReChart', 'Heroku', 'Node.js', 'Express.js', 'Knex.js', 'Swagger', 'Firebase'],
+    role: 'Full-stack Developer Trainee',
+    highlights: ['Created IoT data dashboards', 'Built crop monitoring UI', 'Implemented real-time updates'],
+    //liveUrl: '#',
+    githubUrl: 'https://github.com/HackYourFuture-CPH/FP-class11',
+    gradient: 'from-purple-500 via-pink-500 to-rose-500',
+    accentColor: 'text-pink-400',
+  },
+  {
+    title: 'Winefamly',
+    subtitle: 'e-commerce Platform',
+    description:
+      'Winefamly is an online platform for buying curated wines and managing wine subscriptions',
+    image: '/placeholder.svg',
+    techStack: ['React.js', 'Magento','PHP', 'JavaScript', 'Webpack', 'SCSS', 'MySQL'],
+    role: 'Frontend Developer',
+    highlights: ['Developed and maintained user interfaces and responsive designs.',
+    'Implemented React JS to Magento 2, Adding Widgets in Magento admin.',
+    'Reduced bundle size through webpack and maintained webpack plugins.',
+    'Worked closely with Senior developers, Project Lead and designers.',
+    'Participated in daily meetings, weekly meetings and Task grooming plans.'],
+    liveUrl: 'https://www.winefamly.com/',
+    companyName: 'Winefamly',
     gradient: 'from-green-500 via-emerald-500 to-teal-500',
     accentColor: 'text-emerald-400',
   },
   {
-    title: 'Seasony',
-    subtitle: 'Vertical Farming Dashboard',
+    title: 'Evogym',
+    subtitle: 'Fitness Center application',
     description:
-      'Smart agricultural monitoring system for vertical farms, providing real-time crop analytics, environmental control, and yield optimization through IoT sensors.',
+      'ShopEase is a modern, scalable e-commerce web application built using a cutting-edge frontend stack. It demonstrates best practices in UI development, state management, API handling, and performance optimization.',
     image: '/placeholder.svg',
-    techStack: ['React', 'TypeScript', 'GraphQL', 'Chart.js', 'Tailwind', 'Azure'],
-    role: 'Frontend Developer',
-    highlights: ['Created IoT data dashboards', 'Built crop monitoring UI', 'Implemented real-time updates'],
-    liveUrl: '#',
-    githubUrl: '#',
-    gradient: 'from-purple-500 via-pink-500 to-rose-500',
-    accentColor: 'text-pink-400',
+    techStack: ['React', 'Vite', 'TypeScript', 'React Query (TanStack)', 'React Hook Form', 'Zod', 'React Router', 'TailwindCSS', 'shadcn/ui', 'Radix UI', 'Lucide Icons'],
+    role: 'Web Developer',
+    highlights: ['Built fully responsive and UI components', 'Optimized for mobile, tablet, and desktop', 'Reusable components with Smooth transitions', 'Scalable and maintainable Code'],
+    liveUrl: 'https://shopease-dk.netlify.app/',
+    githubUrl: 'https://github.com/Sreelatha-Vallabhaneni/FitnessApp-React-Typescript',
+    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+    accentColor: 'text-cyan-400',
   },
 ];
 
@@ -169,6 +207,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           <div className="flex items-center gap-4 pt-6 border-t border-border/50">
             <motion.a
               href={project.liveUrl}
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors group/link"
               whileHover={{ x: 4 }}
             >
@@ -176,15 +215,33 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               Live Demo
               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
             </motion.a>
-            <motion.a
+            {project.githubUrl ? (
+              <motion.a
+                href={project.githubUrl}
+                target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors group/link"
+                whileHover={{ x: 4 }}
+              >
+                <Github className="w-4 h-4" />
+                Source Code
+                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+              </motion.a>
+            ) : project.companyName ? (
+              <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                <Building2 className="w-4 h-4" />
+                {project.companyName}
+              </span>
+            ) : null}
+            {/* <motion.a
               href={project.githubUrl}
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors group/link"
               whileHover={{ x: 4 }}
             >
+              {}
               <Github className="w-4 h-4" />
               Source Code
               <ArrowUpRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
       </div>
